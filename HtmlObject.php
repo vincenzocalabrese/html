@@ -190,6 +190,6 @@ abstract class HtmlObject {
 	}
 }
 
-//include (implode ( DIRECTORY_SEPARATOR, array ( 'class', 'html', 'Attribute.php' ) ));
-//include (implode ( DIRECTORY_SEPARATOR, array ( 'class', 'html', 'IFrame.php' ) ));
+include (implode ( DIRECTORY_SEPARATOR, array ( 'class', 'html', 'Attribute.php' ) ));
+include (implode ( DIRECTORY_SEPARATOR, array ( 'class', 'html', 'IFrame.php' ) ));
 ?>

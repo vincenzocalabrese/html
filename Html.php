@@ -100,7 +100,7 @@ class Html extends AHtmlObject {
 		if ($this->xmlns != NULL)
 			$object .= " xmlns=\"" . $this->xmlns . "\"";
 
-		$object .= ">\n";
+		$object .= ">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n";
 		if ($this->head != NULL)
 			$object .= $this->head->getObjectToHtmlString();
 

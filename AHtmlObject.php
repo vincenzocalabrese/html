@@ -1,7 +1,7 @@
 <?php
 /**
  * @author Vincenzo Calabrese
- * @version 0.1.0
+ * @version 1.0.0
  */
 require_once 'dindent/Indenter.php';
 $files = scandir(".");
@@ -152,6 +152,7 @@ abstract class AHtmlObject {
 	 */
 	public function getHtmlContent() {
 		$object = NULL;
+		try {
 		if ($this->htmlContent != NULL) {
 			$object = "";
 			foreach ($this->htmlContent as $htmlContent) {
@@ -161,7 +162,9 @@ abstract class AHtmlObject {
 					$object .= $htmlContent . "";
 			}
 		}
-
+		}
+		catch(Exception $e) {
+		}
 		return $object;
 	}
 

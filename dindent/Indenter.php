@@ -25,6 +25,7 @@ class Indenter {
 
 	/**
 	 * @param array $options
+	 * @throws Exception\InvalidArgumentException
 	 */
 	public function __construct (array $options = array()) {
 		foreach ($options as $name => $value) {
@@ -40,6 +41,7 @@ class Indenter {
 	 * @param string $element_name Element name, e.g. "b".
 	 * @param ELEMENT_TYPE_BLOCK|ELEMENT_TYPE_INLINE $type
 	 * @return null
+	 * @throws Exception\InvalidArgumentException
 	 */
 	public function setElementType ($element_name, $type) {
 		if ($type === static::ELEMENT_TYPE_BLOCK) {
@@ -56,6 +58,7 @@ class Indenter {
 	/**
 	 * @param string $input HTML input.
 	 * @return string Indented HTML.
+	 * @throws Exception\RuntimeException
 	 */
 	public function indent ($input) {
 		$this->log = array();
